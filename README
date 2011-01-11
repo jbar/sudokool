@@ -1,0 +1,8 @@
+ == sudokool README ==
+
+Sudoku resolver/generator.
+
+Works for sudoku sizes 2x2 2x3 2x4 3x3 3x4 4x4 and maybe more.
+
+That is some code i wrote 5 years ago. Its works, it is very memory efficient, but it really have to be cleaned...
+
