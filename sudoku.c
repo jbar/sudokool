@@ -4,7 +4,7 @@
 #include <sys/time.h>
 #include <unistd.h>
 #include "sudoku.h"
-#include <curses.h>
+/*#include <curses.h>*/
 
 
 #ifndef useMALLOC
@@ -126,7 +126,7 @@ unsigned char count_cands(cands_t cand) {
     return ret;
 }
 
-void eliminateinline(char setsize, t_sdk * Grid, unsigned char line) {
+unsigned char eliminateinline(char setsize, t_sdk * Grid, unsigned char line) {
     unsigned char j,k,r;
 	cands_t mask;
 
@@ -521,7 +521,7 @@ int readfile (t_sdk * Tab,char *sdfile)
                 c=fgetc(fp);
                 if (c==EOF) c=' ';
             } while  ( (c < '0' || c > '0'+SIZE ) && c !=' ' );*/ 
-            while (true) {
+            while (1) {
                 c=fgetc(fp);
                 if ( c > '0' && c <= MIN('0'+SIZE,'9') ) {
                     Tab->TAB(i,j)=0x01<<(c-'1');
